@@ -1,0 +1,130 @@
+chai_type: masala_chai #Inline Comments
+temperature: hot
+servings: 2
+brewing_time: 5
+
+chai_recipe:
+  base: black_tea
+  milk: whole_milk
+
+chai_recipe_two:
+  base: black_tea
+  milk: whole_milk
+
+#DATA TYPES
+
+#STRING
+
+chai_name: Masala chai_name
+description: "Chai with Cardamoom, ginger"
+tagline: 'The best chai in town'
+
+brewing_instructions: |
+  boil water
+  add tea leaves
+  add milk 
+
+brewing_instructions_two: >
+  boil water
+  add tea leaves
+  add milk 
+
+#NUMBERS
+
+cupes_per_day: 3
+cupes_per_day_two: 0xFF22FF
+
+#BULLIONS
+
+is_hot: true
+add_suger: yes
+add_salt:  no
+instant:  on
+
+#NULL
+
+sweetner: null
+alternative_milk: ~
+
+#TIME
+
+morning_brew: 2025-01-15
+local_time: 2025-01-15 08:30:01
+
+#list
+
+spices:
+  - ginger
+  - cloves
+  - black_pepper
+  - true
+  - 299
+
+
+# spices:  [cardamom,ginger,clove] #old format
+
+
+stepping-times: [3,2,1]
+
+chai_categories:
+  - name:  Treaditional
+    variies:
+      - Masa;a chai
+      - Ginger chai
+      - Cardmon chai
+
+    -name: Modern
+    variies::
+      - Vanilla chai
+      - Chocolate chai
+
+masala_chai:
+  ingredients:
+    tea: black_tea
+    liquid:
+      water: 200ml
+      milk: 100ml
+    spices:
+      ginger: 1_inch
+      cinnamom: 1_stick
+    preparation:
+      method: simmer
+      duration: 5_minutes
+
+Chai_menu:
+  - name: Masala Chai
+    price: 30
+    size: regular
+
+  - name: Ginger Chai
+    price: 30
+    size: regular
+
+default_chai_bases: &default_base
+  tea: black_tea
+  water: 200ml
+  brewing_time: 5
+  
+morning_chai:
+  <<: *default_base #this means that all the class of default_chai_bases comes and gets copied here automaticley
+  milk: 100ml
+
+evening_chai:
+  <<: *default_base
+  milk: 200ml
+
+zip_code: !!str 12345 #this means !! forces thhe value like !!sr forces 12345 to be a string rathere than integer[int]
+count: !!int "123"
+
+unique_spices: !!set
+  ? cardamom
+  ? ginger
+  ? cloves
+  
+
+    
+
+
+
+
+
